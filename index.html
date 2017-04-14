@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="EsConnector">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.js"></script>
+    <script src="elasticsearch.angular.js"></script>
+    <script src="es_connect.js"></script>
+    <script>
+    </script>
+</head>
+<body>
+<div ng-controller="QueryController">
+    <br>
+    Search result:
+    <br>
+    <div >
+        <table>
+            <tr ng-repeat="item in hits">
+                <td>{{item['_source']['first_name']}}</td>
+                <td>{{item['_source']['last_name']}}</td></tr>
+        </table>
+
+
+    </div>
+</body>
+</html>
